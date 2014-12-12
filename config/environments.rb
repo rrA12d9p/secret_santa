@@ -2,6 +2,7 @@ configure :production, :development do
 	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/bucket')
 
 	ActiveRecord::Base.establish_connection(
+		username: db.user,
 		adapter: db.scheme == 'postgres' ? 'postgresql' : db.scheme,
 		host: db.host,
 		password: db.password,
