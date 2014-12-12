@@ -1,1 +1,5 @@
+<%= erb(:header, :layout => false) %>
+
+<%= request.url.gsub(request.base_url, '') %>
+
 <p>Hello world!</p>
