@@ -1,5 +1,5 @@
 configure :production, :development do
-	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/bucket')
+	db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/secret_santa_db')
 
 	ActiveRecord::Base.establish_connection(
 		username: db.user,

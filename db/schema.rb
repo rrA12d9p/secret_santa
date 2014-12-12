@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(version: 20141212165615) do
     t.datetime "updated_at"
   end
 
-  create_table "items", force: true do |t|
-    t.string   "title"
-    t.text     "desc"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email",            null: false
     t.string   "password_digest",  null: false
