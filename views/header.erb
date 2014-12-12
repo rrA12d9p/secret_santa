@@ -3,10 +3,8 @@
     <ul>
       <li><a href="/">Gifts/Wishlist (<%=Gift.all.length%>)</a></li>
       <li><a href="/logout">Logout
-        (<%= session %>)
+        (<%= session[:user][:email] %>)
       </a></li>
     </ul>
   </nav>
 </header>
-
-<!-- session[:user][:email] -->
